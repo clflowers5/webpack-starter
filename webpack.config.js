@@ -22,10 +22,17 @@ module.exports = {
       },
       {
         test: /\.?scss$/,
+        exclude: /node_modules/,
         use: [
-          'style-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 2,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
           'postcss-loader',
           'sass-loader'
         ]
