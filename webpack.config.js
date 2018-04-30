@@ -19,7 +19,7 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.ts?x$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: ['ts-loader']
       },
