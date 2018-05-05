@@ -11,20 +11,23 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['ts-loader']
       },
       {
-        test: /\.?scss$/,
+        test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
