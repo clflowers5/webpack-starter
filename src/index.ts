@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './scss/main.scss';
-import simpleComponent from './simpleComponent';
+import simpleComponent from './components/simpleComponent';
 
 const element: string = `
 <div>
