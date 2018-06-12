@@ -14,6 +14,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
